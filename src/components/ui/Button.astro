@@ -1,0 +1,19 @@
+---
+interface ButtonProps {
+  text: string; 
+  variant?: "primary" | "secondary";
+  isFull?: boolean;
+}
+
+const { text, variant = "secondary", isFull } = Astro.props;
+---
+
+<button
+  class:list={[
+    variant === "secondary" ? "bg-pvDark text-white" : "bg-pvGreen text-pvDark",
+    isFull && "w-full",
+    "py-5 px-[2.188rem] rounded-[0.875rem]",
+  ]}
+>
+  {text}
+</button>

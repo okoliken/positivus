@@ -1,11 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 // import Card from '../components/Card.astro';
+import HeroImage from '../assets/hero/Illustration.png'
+import Button from '../components/ui/Button.astro';
+import Image from 'astro/components/Image.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-    <div class="text-center">
-        <h3 class="text-5xl">Coming soon</h3>
+<Layout title="Positivus - Navigating the digital landscape for success.">
+    <div class="container mt-[2.524rem] px-5">
+        <h3 class="text-[2.68rem] text-left font-medium leading-[3.429rem] mb-3">Navigating the digital landscape for success</h3>
+        <Image class="h-[19.375rem] object-contain mb-1.5" width={600} height={515} src={HeroImage} alt='hero image' />
+        <p class="font-normal leading-6 mb-10">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+        <Button isFull={true} text="Book a consultation" />
     </div>
 </Layout>
 
