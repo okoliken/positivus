@@ -1,18 +1,21 @@
 ---
-interface ButtonProps {
+interface Props {
   text: string; 
-  variant?: "primary" | "secondary";
+  className?: string
+  variant?: "primary" | "secondary" | 'outline';
   isFull?: boolean;
 }
 
-const { text, variant = "secondary", isFull } = Astro.props;
+const { text, variant = "secondary", isFull, className } = Astro.props;
 ---
 
 <button
   class:list={[
-    variant === "secondary" ? "bg-pvDark text-white" : "bg-pvGreen text-pvDark",
+    variant === "secondary" && "bg-pvDark text-white",
+    variant === 'primary' && "bg-pvGreen text-pvDark",
+    variant === 'outline' && 'border border-pvDark bg-transparent transition ease-in-out hover:text-white hover:bg-pvDark',
     isFull && "w-full",
-    "py-5 px-[2.188rem] rounded-[0.875rem]",
+    `py-5 px-[2.188rem] rounded-[0.875rem] ${className}`,
   ]}
 >
   {text}

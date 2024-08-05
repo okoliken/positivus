@@ -10,7 +10,8 @@ export default {
         pvLightGrey:"#292A32"
       },
       container:{
-        center:true
+        center:true,
+        padding:'6.25rem'
       }
     },
   },

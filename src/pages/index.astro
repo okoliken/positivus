@@ -1,17 +1,114 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 // import Card from '../components/Card.astro';
-import HeroImage from '../assets/hero/Illustration.png'
-import Button from '../components/ui/Button.astro';
-import Image from 'astro/components/Image.astro';
+import HeroImageDesktop from "../assets/hero/hero-desktop.svg";
+import HeroImageMobile from "../assets/hero/hero-mobile.svg";
+import Netflix from "../assets/hero/netflix.svg";
+import Notion from "../assets/hero/notion.svg";
+import Zoom from "../assets/hero/zoom.svg";
+import Hubspot from "../assets/hero/hubspot.svg";
+import Dribbble from "../assets/hero/dribbble.svg";
+import Amazon from "../assets/hero/amazon.svg";
+import Button from "../components/ui/Button.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Positivus - Navigating the digital landscape for success.">
-    <div class="container mt-[2.524rem] px-5">
-        <h3 class="text-[2.68rem] text-left font-medium leading-[3.429rem] mb-3">Navigating the digital landscape for success</h3>
-        <Image class="h-[19.375rem] object-contain mb-1.5" width={600} height={515} src={HeroImage} alt='hero image' />
-        <p class="font-normal leading-6 mb-10">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
-        <Button isFull={true} text="Book a consultation" />
+  <div
+    class="container max-w-7xl px-5 flex items-start flex-col md:flex-col lg:flex-row lg:items-center lg:justify-between"
+  >
+    <div class="flex-1">
+      <h3
+        class="text-[2.68rem] md:text-[3.125rem] lg:text-6xl text-left font-medium leading-[3.429rem] md:leading-[4rem] lg:leading-[4.785rem] mb-3 lg:mb-[2.188rem]"
+      >
+        Navigating the <br class="hidden xl:block" /> digital landscape <br
+          class="hidden xl:block"
+        /> for success
+      </h3>
+      <Image
+        class="object-contain mb-1.5 block lg:hidden"
+        width={361}
+        height={310}
+        src={HeroImageMobile}
+        alt="hero image"
+      />
+      <p class="font-normal leading-6 mb-10 lg:text-lg lg:mb-[2.188rem]">
+        Our digital marketing agency helps businesses <br
+          class="hidden xl:block"
+        /> grow and succeed online <br class="hidden md:block xl:hidden" /> through
+        a range of <br class="hidden xl:block" /> services including SEO, PPC, social
+        media marketing, <br class="hidden xl:block" /> and <br
+          class="hidden md:block xl:hidden"
+        /> content creation.
+      </p>
+      <Button
+        className="w-full sm:max-w-[16.5rem]"
+        text="Book a consultation"
+      />
     </div>
+
+    <Image
+      class="hidden lg:block object-contain flex-1"
+      width={600}
+      height={515}
+      src={HeroImageDesktop}
+      alt="hero image"
+    />
+  </div>
+  <div class="mt-12 container max-w-7xl px-5">
+    <div class="company_logos">
+      <!-- Desktop and Mobile -->
+      <div class="hidden lg:flex items-center justify-between">
+        <!-- Desktop Flex Display -->
+        <Image class="h-12" src={Amazon} alt="amazon" />
+        <Image class="h-12" src={Dribbble} alt="dribbble" />
+        <Image class="h-12" src={Hubspot} alt="hubspot" />
+        <Image class="h-12" src={Notion} alt="notion" />
+        <Image class="h-12" src={Netflix} alt="netflix" />
+        <Image class="h-12" src={Zoom} alt="zoom" />
+      </div>
+      <!-- Mobile Marquee -->
+      <div class="flex lg:hidden flex-col relative h-12">
+        <div class="animate-marquee-1 items-center gap-x-[2.368rem] ">
+          <Image class="h-12" src={Amazon} alt="amazon" />
+          <Image class="h-12" src={Dribbble} alt="dribbble" />
+          <Image class="h-12" src={Hubspot} alt="hubspot" />
+        </div>
+
+        <div class="animate-marquee-2 items-center gap-x-[2.368rem]">
+           <Image class="h-12" src={Notion} alt="notion" />
+           <Image class="h-12" src={Netflix} alt="netflix" />
+           <Image class="h-12" src={Zoom} alt="zoom" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+  
 </Layout>
 
+<style>
+  @keyframes marquee {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+  }
+  
+  @keyframes marquee-2 {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(50%); }
+  }
+  
+  .animate-marquee-1 {
+    display: flex;
+    animation: marquee 20s linear infinite;
+  }
+  .animate-marquee-2 {
+    display: flex;
+    animation: marquee-2 20s linear infinite;
+  }
+  
+  .company_logos img {
+    filter: grayscale(100%);
+  }
+  </style>
