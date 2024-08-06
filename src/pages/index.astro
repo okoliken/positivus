@@ -19,7 +19,7 @@ import { Image } from "astro:assets";
   >
     <div class="flex-1">
       <h3
-        class="text-[2.68rem] md:text-[3.125rem] lg:text-6xl text-left font-medium leading-[3.429rem] md:leading-[4rem] lg:leading-[4.785rem] mb-3 lg:mb-[2.188rem]"
+        class="text-[2.68rem] md:text-[3.125rem] lg:text-6xl text-left font-medium leading-[3.429rem] md:leading-[3.429rem] lg:leading-[4.785rem] mb-3 lg:mb-[2.188rem]"
       >
         Navigating the <br class="hidden xl:block" /> digital landscape <br
           class="hidden xl:block"
@@ -55,7 +55,7 @@ import { Image } from "astro:assets";
       alt="hero image"
     />
   </div>
-  <div class="mt-12 container max-w-7xl px-5">
+  <div class="mt-12 md:container max-w-7xl md:px-5">
     <div class="company_logos">
       <!-- Desktop and Mobile -->
       <div class="hidden lg:flex items-center justify-between">
@@ -68,19 +68,22 @@ import { Image } from "astro:assets";
         <Image class="h-12" src={Zoom} alt="zoom" />
       </div>
       <!-- Mobile Marquee -->
-      <div class="flex lg:hidden flex-col relative h-12">
-        <div class="animate-marquee-1 items-center gap-x-[2.368rem] ">
+      <div class="flex lg:hidden flex-col h-12 overflow-x-hidden overflow-y-auto">
+        <div class="animate-marquee-1 items-center gap-x-[2.368rem]">
           <Image class="h-12" src={Amazon} alt="amazon" />
           <Image class="h-12" src={Dribbble} alt="dribbble" />
           <Image class="h-12" src={Hubspot} alt="hubspot" />
         </div>
-
-        <div class="animate-marquee-2 items-center gap-x-[2.368rem]">
-           <Image class="h-12" src={Notion} alt="notion" />
-           <Image class="h-12" src={Netflix} alt="netflix" />
-           <Image class="h-12" src={Zoom} alt="zoom" />
-        </div>
       </div>
+
+      <div class="flex lg:hidden flex-col h-12 overflow-x-hidden overflow-y-auto">
+        <div class="animate-marquee-2 items-center gap-x-[2.368rem]">
+          <Image class="h-12" src={Notion} alt="notion" />
+          <Image class="h-12" src={Netflix} alt="netflix" />
+          <Image class="h-12" src={Zoom} alt="zoom" />
+       </div>
+      </div>
+
     </div>
   </div>
   
