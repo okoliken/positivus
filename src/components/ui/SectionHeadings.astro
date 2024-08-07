@@ -1,0 +1,13 @@
+---
+interface Props {
+    title:string,
+    content:string,
+}
+
+const { title, content } = Astro.props
+---
+
+<div class="flex items-center justify-center flex-col md:justify-start md:gap-x-10 md:flex-row mb-[2.5rem] md:mb-[5rem]">
+    <h3 class="rounded-[0.438rem] px-[0.438rem] bg-pvGreen inline-block text-black items-center text-center text-[2.25rem] md:text-[2.5rem] font-medium md:leading-[3.19rem] mb-[1.875rem] md:mb-0">{title}</h3>
+    <p set:html={content} class="font-normal md:text-lg leading-6  text-center md:leading-[1.436rem]"></p>
+</div>
