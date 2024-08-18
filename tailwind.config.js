@@ -12,7 +12,10 @@ export default {
       container:{
         center:true,
         padding:'2rem'
-      }
+      },
+      boxShadow: ({theme}) => ({
+        'card-shadow': `0px 5px 0px 0px ${theme('colors.pvDark')}`,
+      }),
     },
   },
   plugins: [],

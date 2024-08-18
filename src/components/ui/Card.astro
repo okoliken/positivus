@@ -1,7 +1,32 @@
 ---
+interface Props {
+  variant?: "gray" | "dark" | "green";
+}
 
+const { variant = "gray" } = Astro.props;
+
+const variantClasses = {
+  gray: "bg-pvGrey",
+  dark: "bg-pvDark",
+  green: "bg-pvGreen",
+};
+
+const CardTitle = Astro.slots.render("card-title");
+const CardLink = Astro.slots.render("card-link");
+const CardImage = Astro.slots.render("card-image");
 ---
 
-<li>
-	
-</li>
+<div
+  class:list={[
+    variantClasses[variant],
+    "flex items-center gap-x-[4.313rem] border border-pvDark p-[3.125rem] rounded-[2.813rem] h-[20.125rem] lg:h-[19.375rem] mb-[1.875rem] lg:mb-0 shadow-card-shadow",
+  ]}
+>
+  <div class="h-full flex flex-col justify-between">
+    {CardTitle ? <slot name="card-title" /> : <p>No title provided</p>}
+    {CardLink ? <slot name="card-link" /> : null}
+  </div>
+  <div>
+    {CardImage ? <slot name="card-image" /> : <p>No image provided</p>}
+  </div>
+</div>
