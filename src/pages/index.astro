@@ -3,6 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/ui/Card.astro";
 import HeroImageDesktop from "../assets/hero/hero-desktop.svg";
 import HeroImageMobile from "../assets/hero/hero-mobile.svg";
+import SearchEngine from '../assets/services/search-engine.svg'
+import Advertising from '../assets/services/advertising.svg'
+import Tracking from '../assets/services/tracking.svg'
+import SocialMarketing from '../assets/services/social-marketing.svg'
+import EmailMarketing from '../assets/services/email-marketing.svg'
+import ContentCreation from '../assets/services/content-creation.svg'
 import Netflix from "../assets/hero/netflix.svg";
 import Notion from "../assets/hero/notion.svg";
 import Zoom from "../assets/hero/zoom.svg";
@@ -11,6 +17,7 @@ import Dribbble from "../assets/hero/dribbble.svg";
 import Amazon from "../assets/hero/amazon.svg";
 import Button from "../components/ui/Button.astro";
 import SectionHeadings from "../components/ui/SectionHeadings.astro";
+import Link from "../components/ui/Link.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -56,7 +63,7 @@ import { Image } from "astro:assets";
       alt="hero image"
     />
   </div>
-  <div class="mt-12 container">
+  <div class="mt-12 px-0 md:px-8 max-w-7xl container">
     <div class="company_logos">
       <!-- Desktop and Mobile -->
       <div class="hidden lg:flex items-center justify-between">
@@ -99,57 +106,82 @@ import { Image } from "astro:assets";
 
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
       <Card>
-        <div slot="card-title">
-          <p
-            class="bg-pvGreen inline text-[1.875rem] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] box-decoration-clone leading-tight"
+        <div class="w-full" slot="card-title">
+          <span
+            class="bg-pvGreen inline text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] box-decoration-clone leading-tight"
           >
             Search engine optimization
-          </p>
+          </span>
         </div>
+        <div slot="card-link">
+          <Link iconVariant="dark" isDark linkText="Learn more" />
+        </div>
+        <Image slot="card-image" src={SearchEngine} alt="services - Search engine optimization" />
       </Card>
       <Card variant="green">
-        <div slot="card-title">
+        <div class="w-full" slot="card-title">
           <p
-            class="bg-white text-[1.875rem] inline font-medium lg:leading-[2.393rem] box-decoration-clone rounded-[0.438rem] px-2.5"
+            class="bg-white text-[clamp(1.625rem,5vw,1.875rem)] inline font-medium lg:leading-[2.393rem] box-decoration-clone rounded-[0.438rem] px-2.5"
           >
             Pay-per-click advertising
           </p>
         </div>
+        <div slot="card-link">
+          <Link iconVariant="dark" isDark linkText="Learn more" />
+        </div>
+        <Image slot="card-image" src={Advertising} alt="services - Social Media Marketing" />
       </Card>
       <Card variant="dark">
-        <div slot="card-title">
+        <div class="w-full" slot="card-title">
           <p
-            class="bg-white text-[1.875rem] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] box-decoration-clone inline"
+            class="bg-white text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] box-decoration-clone inline"
           >
             Social Media Marketing
           </p>
         </div>
+        <div slot="card-link">
+          <Link iconVariant="white" isDark={false} linkText="Learn more" />
+        </div>
+        <Image slot="card-image" src={SocialMarketing} alt="services - Social Media Marketing" />
       </Card>
       <Card>
-        <div
-          class="bg-pvGreen text-[1.875rem] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone"
-          slot="card-title"
-        >
-          <p>Email Marketing</p>
-        </div>
-      </Card>
-      <Card variant="green">
         <div slot="card-title">
           <p
-            class="bg-white text-[1.875rem] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone"
+            class="bg-pvGreen text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone"
+          >
+            Email Marketing
+          </p>
+        </div>
+        <div slot="card-link">
+          <Link iconVariant="dark" isDark linkText="Learn more" />
+        </div>
+        <Image slot="card-image" src={EmailMarketing} alt="services - Email Marketing" />
+      </Card>
+      <Card variant="green">
+        <div class="w-full" slot="card-title">
+          <p
+            class="bg-white text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone"
           >
             Content Creation
           </p>
         </div>
+        <div slot="card-link">
+          <Link iconVariant="dark" isDark linkText="Learn more" />
+        </div>
+        <Image slot="card-image" src={ContentCreation} alt="services - Content Creation" />
       </Card>
       <Card variant="dark">
-        <div slot="card-title">
+        <div class="w-full" slot="card-title">
           <p
-            class="bg-pvGreen text-[1.875rem] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone"
+            class="bg-pvGreen text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone"
           >
             Analytics and Tracking
           </p>
         </div>
+        <div slot="card-link">
+          <Link iconVariant="white" isDark={false} linkText="Learn more" />
+        </div>
+        <Image src={Tracking} alt="Analytics and Tracking" />
       </Card>
     </div>
   </div>
