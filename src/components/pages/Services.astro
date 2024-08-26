@@ -1,0 +1,208 @@
+---
+import Card from "../ui/Card.astro";
+import { Image } from "astro:assets";
+import SearchEngine from "../../assets/services/search-engine.svg";
+import Advertising from "../../assets/services/advertising.svg";
+import Tracking from "../../assets/services/tracking.svg";
+import SocialMarketing from "../../assets/services/social-marketing.svg";
+import EmailMarketing from "../../assets/services/email-marketing.svg";
+import ContentCreation from "../../assets/services/content-creation.svg";
+import Illustration from "../../assets/services/Illustration.svg";
+import Link from "../ui/Link.astro";
+import Button from "../ui/Button.astro";
+import SectionHeadings from "../ui/SectionHeadings.astro";
+---
+<div>
+    <SectionHeadings
+title="Services"
+content={`At our digital marketing agency, we offer a range of services to <br class="hidden md:block"/> help businesses grow and succeed online. These services include:`}
+/>
+<div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
+    <Card>
+      <div class="w-[13.813rem]" slot="card-title">
+        <p
+          class="bg-pvGreen inline text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] box-decoration-clone leading-tight"
+        >
+          Search engine optimization
+        </p>
+      </div>
+      <div class="flex w-full justify-between items-end" slot="card-link">
+        <Link iconVariant="dark" isDark linkText="Learn more" />
+        <Image
+          class="w-[10.313rem] object-cover block md:hidden"
+          slot="card-image"
+          width={165}
+          height={129}
+          src={SearchEngine}
+          alt="services - Search engine optimization"
+        />
+      </div>
+      <Image
+        class="w-fit object-cover hidden md:block"
+        slot="card-image"
+        src={SearchEngine}
+        alt="services - Search engine optimization"
+      />
+    </Card>
+    <Card variant="green">
+      <div class="w-[13.813rem]" slot="card-title">
+        <p
+          class="bg-white text-[clamp(1.625rem,5vw,1.875rem)] inline font-medium lg:leading-[2.393rem] box-decoration-clone rounded-[0.438rem] px-[0.438rem] leading-tight"
+        >
+          Pay-per-click advertising
+        </p>
+      </div>
+      <div class="flex w-full justify-between items-end" slot="card-link">
+        <Link iconVariant="dark" isDark linkText="Learn more" />
+        <Image
+          class="w-[10.313rem] object-cover block md:hidden"
+          slot="card-image"
+          width={165}
+          height={129}
+          src={Advertising}
+          alt="services - Social Media Marketing"
+        />
+      </div>
+      <Image
+        class="w-fit object-cover hidden md:block"
+        slot="card-image"
+        src={Advertising}
+        alt="services - Social Media Marketing"
+      />
+    </Card>
+    <Card variant="dark">
+      <div class="w-[13.813rem]" slot="card-title">
+        <p
+          class="bg-white text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] box-decoration-clone inline leading-tight"
+        >
+          Social Media Marketing
+        </p>
+      </div>
+      <div class="flex w-full justify-between items-end" slot="card-link">
+        <Link iconVariant="white" isDark={false} linkText="Learn more" />
+        <Image
+          class="w-[10.313rem] object-cover block md:hidden"
+          slot="card-image"
+          width={165}
+          height={129}
+          src={SocialMarketing}
+          alt="services - Social Media Marketing"
+        />
+      </div>
+      <Image
+        class="w-fit object-cover hidden md:block"
+        slot="card-image"
+        src={SocialMarketing}
+        alt="services - Social Media Marketing"
+      />
+    </Card>
+    <Card>
+      <div class="w-[8.875rem]" slot="card-title">
+        <p
+          class="bg-pvGreen text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone leading-tight"
+        >
+          Email Marketing
+        </p>
+      </div>
+      <div class="flex w-full justify-between items-end" slot="card-link">
+        <Link iconVariant="dark" isDark linkText="Learn more" />
+        <Image
+          class="w-[10.313rem] object-cover block md:hidden"
+          slot="card-image"
+          width={165}
+          height={129}
+          src={EmailMarketing}
+          alt="services - Email Marketing"
+        />
+      </div>
+      <Image
+        class="w-fit object-cover hidden md:block"
+        slot="card-image"
+        src={EmailMarketing}
+        alt="services - Email Marketing"
+      />
+    </Card>
+    <Card variant="green">
+      <div class="w-[13.813rem]" slot="card-title">
+        <p
+          class="bg-white text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone leading-tight"
+        >
+          Content Creation
+        </p>
+      </div>
+      <div class="flex w-full justify-between items-end" slot="card-link">
+        <Link iconVariant="dark" isDark linkText="Learn more" />
+        <Image
+          class="w-[10.313rem] object-cover block md:hidden"
+          slot="card-image"
+          width={165}
+          height={129}
+          src={ContentCreation}
+          alt="services - Content Creation"
+        />
+      </div>
+      <Image
+        class="w-fit object-cover hidden md:block"
+        slot="card-image"
+        src={ContentCreation}
+        alt="services - Content Creation"
+      />
+    </Card>
+    <Card variant="dark">
+      <div class="w-[13.813rem]" slot="card-title">
+        <p
+          class="bg-pvGreen text-[clamp(1.625rem,5vw,1.875rem)] font-medium lg:leading-[2.393rem] px-[0.438rem] rounded-[0.438rem] inline box-decoration-clone leading-tight"
+        >
+          Analytics and Tracking
+        </p>
+      </div>
+      <div class="flex w-full justify-between items-end" slot="card-link">
+        <Link iconVariant="white" isDark={false} linkText="Learn more" />
+        <Image
+          class="w-[10.313rem] object-cover block md:hidden"
+          src={Tracking}
+          width={165}
+          height={129}
+          slot="card-image"
+          alt="Analytics and Tracking"
+        />
+      </div>
+      <Image
+        class="w-fit object-cover hidden md:block"
+        src={Tracking}
+        slot="card-image"
+        alt="Analytics and Tracking"
+      />
+    </Card>
+  </div>
+
+  <div
+    class="bg-pvGrey p-[3.125rem] lg:p-[3.75rem] relative mt-[4.408rem] lg:mt-[7.719rem] rounded-[2.813rem] flex items-center justify-between"
+  >
+    <div class="flex flex-col gap-y-[1.625rem]">
+      <h3
+        class="text-[1.625rem] lg:text-3xl leading-[2.074rem] lg:leading-[2.393rem] font-medium"
+      >
+        Let’s make things happen
+      </h3>
+      <p class="lg:text-lg leading-[1.436rem]">
+        Contact us today to learn more about how our digital <br
+          class="hidden lg:block"
+        /> marketing services can help your business grow and <br
+          class="hidden lg:block"
+        /> succeed online.
+      </p>
+      <Button
+        className="w-full lg:max-w-[16.5rem]"
+        text="Get your free proposal"
+      />
+    </div>
+    <Image
+      class="absolute lg:right-[3.75rem] xl:right-[8.438rem] hidden lg:block"
+      width={359}
+      height={394}
+      src={Illustration}
+      alt="illustration image"
+    />
+  </div>
+</div>
