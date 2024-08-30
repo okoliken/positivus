@@ -1,0 +1,51 @@
+---
+import SectionHeadings from "../ui/SectionHeadings.astro";
+import Accordion from "../ui/Accordion.astro";
+---
+
+<SectionHeadings
+  className="mt-[3.75rem] lg:mt-[8.75rem]"
+  title="Our Working Process"
+  content={`Step-by-Step Guide to Achieving <br class="hidden lg:block"/>  Your Business Goals`}
+/>
+
+<Accordion
+  sections={[
+    {
+      number: "01",
+      title: "Consultation",
+      content:
+        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+    },
+    {
+      number: "02",
+      title: "Research and Strategy Development",
+      content:
+        "In this phase, we dive deep into understanding your market, competitors, and industry trends. We'll develop a comprehensive strategy that aligns with your business goals and sets the foundation for success.",
+    },
+    {
+      number: "03",
+      title: "Implementation",
+      content:
+        "Our team will execute the strategies developed in the previous phase, ensuring that all aspects are aligned with your business objectives. We focus on delivering high-quality results that drive growth and profitability.",
+    },
+    {
+      number: "04",
+      title: "Monitoring and Optimization",
+      content:
+        "We continuously monitor the performance of your campaigns and initiatives, making data-driven adjustments to optimize results. This ensures that your business is always ahead of the competition.",
+    },
+    {
+      number: "05",
+      title: "Reporting and Communication",
+      content:
+        "Regular reporting and transparent communication are key to our process. We provide detailed insights and updates on progress, so you are always informed and confident in the direction we're taking.",
+    },
+    {
+      number: "06",
+      title: "Continual Improvement",
+      content:
+        "The final step is not the end; it's just the beginning. We believe in continual improvement, regularly revisiting and refining strategies to ensure ongoing success and adaptation to the ever-changing market.",
+    },
+  ]}
+/>
