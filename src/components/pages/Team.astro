@@ -1,0 +1,78 @@
+---
+import SectionHeadings from "../ui/SectionHeadings.astro";
+import Card from "../ui/Card.astro";
+import Button from "../ui/Button.astro";
+import Brian from '../../assets/team/brian.png'
+import Emily from '../../assets/team/emily.png'
+import Jane from '../../assets/team/jane.png'
+import John from '../../assets/team/john.png'
+import Michael from '../../assets/team/michael.png'
+import Sarah from '../../assets/team/sarah.png'
+
+const teamMembers = [
+  {
+    name: "John Smith",
+    position: "CEO and Founder",
+    experience: "10+ years of experience in digital marketing.",
+    expertise: "Expertise in SEO, PPC, and content strategy",
+    image: Brian
+  },
+  {
+    name: "Jane Doe",
+    position: "Director of Operations",
+    experience: "7+ years of experience in project management and team leadership.",
+    skills: "Strong organizational and communication skills",
+    image: Emily
+  },
+  {
+    name: "Michael Brown",
+    position: "Senior SEO Specialist",
+    experience: "5+ years of experience in SEO and content creation.",
+    proficiency: "Proficient in keyword research and on-page optimization",
+    image: Jane
+  },
+  {
+    name: "Emily Johnson",
+    position: "PPC Manager",
+    experience: "3+ years of experience in paid search advertising.",
+    skills: "Skilled in campaign management and performance analysis",
+    image: John
+  },
+  {
+    name: "Brian Williams",
+    position: "Social Media Specialist",
+    experience: "4+ years of experience in social media marketing.",
+    proficiency: "Proficient in creating and scheduling content, analyzing metrics, and building engagement",
+    image: Michael
+  },
+  {
+    name: "Sarah Kim",
+    position: "Content Creator",
+    experience: "2+ years of experience in writing and editing.",
+    skills: "Skilled in creating compelling, SEO-optimized content for various industries",
+    image: Sarah
+  }
+]
+
+---
+
+<div>
+    <SectionHeadings
+title="Team"
+content={`Meet the skilled and experienced team behind our <br /> successful digital marketing strategies`}
+/>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[2.5rem]">
+    {teamMembers.map((member) => (
+        <Card cardType="content-driven">
+            <div>
+        
+            </div>
+        </Card>
+    ))}
+</div>
+
+<div class="flex justify-end w-full mt-[2.5rem]">
+<Button className="w-full max-w-full sm:max-w-[16.813rem]" text="See all team" />
+</div>
+</div>
