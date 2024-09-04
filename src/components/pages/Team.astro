@@ -8,6 +8,7 @@ import Jane from '../../assets/team/jane.png'
 import John from '../../assets/team/john.png'
 import Michael from '../../assets/team/michael.png'
 import Sarah from '../../assets/team/sarah.png'
+import { Image } from "astro:assets";
 
 const teamMembers = [
   {
@@ -65,8 +66,17 @@ content={`Meet the skilled and experienced team behind our <br /> successful dig
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[2.5rem]">
     {teamMembers.map((member) => (
         <Card cardType="content-driven">
-            <div>
-        
+            <div class="flex items-end gap-x-[1.25rem]">
+              <Image class="w-[6.603rem] h-[6.426rem]" src={member.image} alt={member.name} />
+              <div>
+                <p>{member.name}</p>
+                <span>{member.position}</span>
+              </div>
+            </div>
+            <div class="border-t border-black">
+                <p>
+                  {member.experience}
+                </p>
             </div>
         </Card>
     ))}
