@@ -8,50 +8,54 @@ import Jane from "../../assets/team/jane.png";
 import John from "../../assets/team/john.png";
 import Michael from "../../assets/team/michael.png";
 import Sarah from "../../assets/team/sarah.png";
+import LinkedIn from "../../assets/team/linkedin.svg";
 import { Image } from "astro:assets";
 
 const teamMembers = [
   {
     name: "John Smith",
     position: "CEO and Founder",
-    experience: "10+ years of experience in digital marketing.",
-    expertise: "Expertise in SEO, PPC, and content strategy",
-    image: Brian,
+    experience:
+      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    image: John,
   },
   {
     name: "Jane Doe",
     position: "Director of Operations",
     experience:
-      "7+ years of experience in project management and team leadership.",
+      "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
     skills: "Strong organizational and communication skills",
-    image: Emily,
+    image: Jane,
   },
   {
     name: "Michael Brown",
     position: "Senior SEO Specialist",
-    experience: "5+ years of experience in SEO and content creation.",
-    proficiency: "Proficient in keyword research and on-page optimization",
-    image: Jane,
+    experience:
+      "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
+    image: Michael,
   },
   {
     name: "Emily Johnson",
     position: "PPC Manager",
-    experience: "3+ years of experience in paid search advertising.",
+    experience:
+      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
     skills: "Skilled in campaign management and performance analysis",
-    image: John,
+    image: Emily,
   },
   {
     name: "Brian Williams",
     position: "Social Media Specialist",
-    experience: "4+ years of experience in social media marketing.",
+    experience:
+      "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
     proficiency:
-      "Proficient in creating and scheduling content, analyzing metrics, and building engagement",
-    image: Michael,
+      "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
+    image: Brian,
   },
   {
     name: "Sarah Kim",
     position: "Content Creator",
-    experience: "2+ years of experience in writing and editing.",
+    experience:
+      "2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content for various industries",
     skills:
       "Skilled in creating compelling, SEO-optimized content for various industries",
     image: Sarah,
@@ -69,18 +73,40 @@ const teamMembers = [
     {
       teamMembers.map((member) => (
         <Card cardType="content-driven">
-          <div class="flex items-end gap-x-[1.25rem]">
+          <div class="relative flex items-end gap-x-[1.25rem] pb-[1.25rem] sm:pb-[1.75rem]">
             <Image
               class="w-[6.603rem] h-[6.426rem]"
               src={member.image}
               alt={member.name}
             />
             <div>
-              <p>{member.name}</p>
+              <p class="font-medium">{member.name}</p>
               <span>{member.position}</span>
             </div>
+            <svg
+              class="absolute top-0 right-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+            >
+              <circle cx="17" cy="17" r="17" fill="black" />
+              <path
+                d="M9.31776 25H12.8131V13.6844H9.31776V25Z"
+                fill="#B9FF66"
+              />
+              <path
+                d="M9 10.0719C9 11.1875 9.90031 12.0906 11.0654 12.0906C12.1776 12.0906 13.0779 11.1875 13.0779 10.0719C13.0779 8.95625 12.1776 8 11.0654 8C9.90031 8 9 8.95625 9 10.0719Z"
+                fill="#B9FF66"
+              />
+              <path
+                d="M22.4517 25H26V18.7844C26 15.7562 25.3115 13.3656 21.7632 13.3656C20.0685 13.3656 18.9034 14.3219 18.4268 15.225H18.3738V13.6844H15.0374V25H18.5327V19.4219C18.5327 17.9344 18.7975 16.5 20.6511 16.5C22.4517 16.5 22.4517 18.2 22.4517 19.475V25Z"
+                fill="#B9FF66"
+              />
+            </svg>
           </div>
-          <div class="border-t border-black">
+          <div class="border-t border-black pt-[1.25rem] sm:pt-[1.75rem]">
             <p>{member.experience}</p>
           </div>
         </Card>
